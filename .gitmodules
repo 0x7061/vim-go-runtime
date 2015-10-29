@@ -1,0 +1,3 @@
+[submodule "submodules/amix-vimrc"]
+	path = submodules/amix-vimrc
+	url = https://github.com/amix/vimrc.git
