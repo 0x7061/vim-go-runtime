@@ -5,7 +5,7 @@ Fast and extendable vim-based go development environment.
 
 ## Install
 
-1. Backup your old .vimrc, .gvimrc or .ctags if you have one:
+1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have one:
 
   ```$ cp ~/.vimrc ~/.vimrc_backup```
 
@@ -37,77 +37,77 @@ There are several vimrcs that play together in this configuration.
   </tr>
   <tr>
     <td><a href="https://github.com/Valloric/YouCompleteMe" target="_blank">Valloric/YouCompleteMe</a></td>
-    <td>Mandatory. You need this for proper auto completion when coding in go.</td>
+    <td>You need this for proper auto completion when coding in go.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/kien/ctrlp.vim" target="_blank">kien/ctrlp</a></td>
-    <td>Mandatory. Switch between files, buffers or tags in no time. Yeah!</td>
+    <td>Switch between files, buffers or tags in no time. Yeah!</td>
   </tr>
   <tr>
     <td><a href="https://github.com/xolox/vim-misc" target="_blank">xolox/vim-misc</a></td>
-    <td>Mandatory. Dependency for vim-session, see below.</td>
+    <td>Dependency for vim-session, see below.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/xolox/vim-session" target="_blank">xolox/vim-session</a></td>
-    <td>Mandatory. Don't abuse tmux, use vim-session to reopen all your buffers!</td>
+    <td>Don't abuse tmux, use vim-session to reopen all your buffers!</td>
   </tr>
   <tr>
     <td><a href="https://github.com/fatih/vim-go" target="_blank">fatih/vim-go</a></td>
-    <td>For golang. This is THE golang plugin for vim! The reason I switched to vim.</td>
+    <td>This is THE golang plugin for vim! The reason I switched to vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/garyburd/go-explorer" target="_blank">garyburd/go-explorer</a></td>
-    <td>For golang. Nice to have go plugin to show documentation for a specific package.</td>
+    <td>Nice to have go plugin to show documentation for a specific package.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/sirver/ultisnips" target="_blank">sirver/ultisnips</a></td>
-    <td>For snippets. Really useful plugin if you want to generate boilerplate code.</td>
+    <td>Really useful plugin if you want to generate boilerplate code.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/tpope/vim-fugitive" target="_blank">tpope/vim-fugitive</a></td>
-    <td>Important. Git integration to check your commits, status and more directly in vim.</td>
+    <td>Git integration to check your commits, status and more directly in vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/tomtom/tcomment_vim" target="_blank">tomtom/tcomment_vim</a></td>
-    <td>Important. Plugin for super fast and convenient commenting (inline, block, more ...).</td>
+    <td>Plugin for super fast and convenient commenting (inline, block, more ...).</td>
   </tr>
   <tr>
     <td><a href="https://github.com/scrooloose/nerdtree" target="_blank">scrooloose/nerdtree</a></td>
-    <td>Important. Shows a file tree on the left and lets you create/delete files directly in vim.</td>
+    <td>Shows a file tree on the left and lets you create/delete files directly in vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/Raimondi/delimitMate" target="_blank">Raimondi/delimitMate</a></td>
-    <td>Important. Very useful plugin for auto-completing quotes, parens, brackets etc.</td>
+    <td>Very useful plugin for auto-completing quotes, parens, brackets etc.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/rking/ag.vim" target="_blank">rking/ag</a></td>
-    <td>Important. This plugin lets you browse for code throughout your whole project.</td>
+    <td>This plugin lets you browse for code throughout your whole project.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/majutsushi/tagbar" target="_blank">majutsushi/tagbar</a></td>
-    <td>Important. Shows a sexy tag-bar on the right and lets you jump directly to tags.</td>
+    <td>Shows a sexy tag-bar on the right and lets you jump directly to tags.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/ap/vim-buftabline" target="_blank">ap/vim-buftabline</a></td>
-    <td>Important. Displays a bar on the top showing all your open buffers.</td>
+    <td>Displays a bar on the top showing all your open buffers.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/itchyny/lightline.vim" target="_blank">itchyny/lightline</a></td>
-    <td>Nice-to-have. This plugin shows a nice status bar and is very configurable.</td>
+    <td>This plugin shows a nice status bar and is very configurable.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/flazz/vim-colorschemes" target="_blank">flazz/vim-colorschemes</a></td>
-    <td>Nice-to-have. Gives you tons of color schemes for vim.</td>
+    <td>Gives you tons of color schemes for vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/mhinz/vim-sayonara" target="_blank">mhinz/vim-sayonara</a></td>
-    <td>Nice-to-have. This plugin helps you to close buffers or whole windows.</td>
+    <td>This plugin helps you to close buffers or whole windows.</td>
   </tr>
 </table>
 
 ## Leader
 
-The leader is configured as `,`.
+The leader is configured as `,`
 
 ## Shortcuts
 
@@ -115,9 +115,6 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
 
 #### Navigation
 
-<table>
-<tr>
-<td>
 <h5>Basic</h5>
 <table>
   <tr>
@@ -165,8 +162,7 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
     <td>Toggle tagbar</td>
   </tr>
 </table>
-</td>
-<td valign="top">
+
 <h5>Ctrlp</h5>
 <table>
   <tr>
@@ -204,9 +200,6 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
     <td><code>[leader]+a</code></td>
     <td>Close quickfix window</td>
   </tr>
-</table>
-</td>
-</tr>
 </table>
 
 #### Golang
