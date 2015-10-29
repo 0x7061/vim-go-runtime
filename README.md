@@ -57,7 +57,7 @@ There are several vimrcs that play together in this configuration.
   </tr>
   <tr>
     <td><a href="https://github.com/garyburd/go-explorer" target="_blank">garyburd/go-explorer</a></td>
-    <td>Nice to have go plugin to show documentation for a specific package.</td>
+    <td>Nice to have plugin to show documentation for a specific package.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/sirver/ultisnips" target="_blank">sirver/ultisnips</a></td>
@@ -65,15 +65,15 @@ There are several vimrcs that play together in this configuration.
   </tr>
   <tr>
     <td><a href="https://github.com/tpope/vim-fugitive" target="_blank">tpope/vim-fugitive</a></td>
-    <td>Git integration to check your commits, status and more directly in vim.</td>
+    <td>Git integration to check commits, status and more directly in vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/tomtom/tcomment_vim" target="_blank">tomtom/tcomment_vim</a></td>
-    <td>Plugin for super fast and convenient commenting (inline, block, more ...).</td>
+    <td>Plugin for super fast and convenient commenting (inline, block).</td>
   </tr>
   <tr>
     <td><a href="https://github.com/scrooloose/nerdtree" target="_blank">scrooloose/nerdtree</a></td>
-    <td>Shows a file tree on the left and lets you create/delete files directly in vim.</td>
+    <td>Shows a file tree on the left and lets you modify files directly in vim.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/Raimondi/delimitMate" target="_blank">Raimondi/delimitMate</a></td>
@@ -239,11 +239,11 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
     <td><strong>Description</strong></td>
   </tr>
   <tr>
-    <td>[leader]+g</td>
+    <td><code>[leader]+g</code></td>
     <td>Search for term</td>
   </tr>
   <tr>
-    <td>[leader]+a</td>
+    <td><code>[leader]+a</codee></td>
     <td>Close quickfix window</td>
   </tr>
 </table>
