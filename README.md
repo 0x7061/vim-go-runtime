@@ -12,10 +12,12 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 2. Simply clone this repository to ~/.vim-go-runtime in your home folder like this:
 
   ```$ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime```
+  
+  Ignore the error that says it failed to recurse into submodule path 'submodules/amix-vimrc'. This is a gruvbox submodule error in amix' repository.
 
-3. Move to the directory and run the install script:
+3. Run the install script:
 
-  ```$ cd ~/.vim-go-runtime && sh install.sh```
+  ```$ sh ~/.vim-go-runtime/install.sh```
   
   This will take some time as its going to install all the vim plugins including vim-go and YouCompleteMe (which is quite large and needs to get compiled).
   
