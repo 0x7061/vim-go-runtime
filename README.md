@@ -1,5 +1,5 @@
 # vim-go-runtime
-Fast and extendable vim-based go development environment.
+Fast and extendable vim-based go development environment. Inspired by farazdagi's vim-go-ide and powering fatih's vim-go plugin.
 
 <img src="https://raw.githubusercontent.com/codepushr/vim-go-runtime/master/screenshots/screenshot_01.png" alt="vim-go-runtime" />
 
