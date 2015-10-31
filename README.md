@@ -233,6 +233,19 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
   </tr>
 </table>
 
+#### Comments
+
+<table>
+  <tr>
+    <td><strong>Shortcut</strong></td>
+    <td><strong>Description</strong></td>
+  </tr>
+  <tr>
+    <td><code>[leader]+__</code></td>
+    <td>Toggle comment selection</td>
+  </tr>
+</table>
+
 #### Project wide search
 
 <table>
@@ -245,12 +258,22 @@ Here's a quick list of shortcuts that I configured. You can change them to your 
     <td>Search for term</td>
   </tr>
   <tr>
+    <td><code>[ctrl]+n</code></td>
+    <td>Go to next occurance</td>
+  </tr>
+  <tr>
+    <td><code>[ctrl]+p</code></td>
+    <td>Go to previous occurance</td>
+  </tr>
+  <tr>
     <td><code>[leader]+a</codee></td>
     <td>Close quickfix window</td>
   </tr>
 </table>
 
 ## Licence Information
+
+MIT LICENCE
 
 Copyright 2015 - by Aleksandar Palic - http://www.twitter.com/codepushr
 
