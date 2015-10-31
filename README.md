@@ -5,6 +5,10 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 
 ## Install
 
+0. (Optional) Get MacVIM:
+
+  ```$ brew install macvim --with-lua```
+
 1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have one:
 
   ```$ cp ~/.vimrc ~/.vimrc_backup```
