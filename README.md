@@ -27,8 +27,6 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 2. Simply clone this repository to ~/.vim-go-runtime in your home folder like this:
 
   ```$ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime```
-  
-  Ignore the error that says it failed to recurse into submodule path 'submodules/amix-vimrc'. This is a gruvbox submodule error in amix' repository.
 
 3. Run the install script:
 
@@ -36,7 +34,23 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
   
   This will take some time as its going to install all the vim plugins including vim-go and YouCompleteMe (which is quite large and needs to get compiled).
   
-  You might encounter a YCM error while installation, in that case simply wait and let the script finish. It should work just fine.
+## Troubleshooting
+
+1. "After cloning the repository I'm getting the following git error"
+
+  ```
+  No submodule mapping found in .gitmodules for path 'sources_non_forked/gruvbox'
+  Failed to recurse into submodule path 'submodules/amix-vimrc'
+  ```
+  Simply ignore this. This is a gruvbox submodule error in amix' repository (from which we use the base vimrc config). This setup even includes gruvbox with the vim-colorschemes plugin.
+  
+2. "I'm getting a YouCompleteMe error after running the install script"
+
+  ```
+  ycm_client_support.[so|pyd|dll] and ycm_core.[so|pyd|dll] not detected; 
+  you need to compile YCM before using it. Read the docs!
+  ```
+  This is just a warning, don't be scared. Just let the install script finish and it will compile it afterwards. Everything should run just fine after the script ends.
   
 ## Vimrcs
   
