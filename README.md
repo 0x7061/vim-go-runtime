@@ -36,7 +36,7 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
   
 ## Troubleshooting
 
-1. "After cloning the repository I'm getting the following git error"
+1. **After cloning the repository I'm getting the following git error**
 
   ```
   No submodule mapping found in .gitmodules for path 'sources_non_forked/gruvbox'
@@ -44,7 +44,7 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
   ```
   Simply ignore this. This is a gruvbox submodule error in amix' repository (from which we use the base vimrc config). This setup even includes gruvbox with the vim-colorschemes plugin.
   
-2. "I'm getting a YouCompleteMe error after running the install script"
+2. **I'm getting a YouCompleteMe error after running the install script**
 
   ```
   ycm_client_support.[so|pyd|dll] and ycm_core.[so|pyd|dll] not detected; 
