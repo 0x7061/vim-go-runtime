@@ -5,11 +5,22 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 
 ## Install
 
-0. (Optional) Get MacVIM:
+0. Get a high enough version of Vim (7.4+) and MacVim:
 
-  ```$ brew install macvim --with-lua```
+  ```
+  $ brew install vim --with-lua
+  $ brew install macvim --with-lua
+  ```
+  You probably need to add this to your `.bash_profile` to pick the right vim:
+  ```
+  alias vim="/usr/local/bin/vim"
+  ```
+  Don't forget to source afterwards:
+  ```
+  $ source ~/.bash_profile
+  ```
 
-1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have one:
+1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have any:
 
   ```$ cp ~/.vimrc ~/.vimrc_backup```
 
@@ -24,6 +35,8 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
   ```$ sh ~/.vim-go-runtime/install.sh```
   
   This will take some time as its going to install all the vim plugins including vim-go and YouCompleteMe (which is quite large and needs to get compiled).
+  
+  You might encounter a YCM error while installation, in that case simply wait and let the script finish. It should work just fine.
   
 ## Vimrcs
   
