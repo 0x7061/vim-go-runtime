@@ -24,19 +24,22 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 
   ```$ cp ~/.vimrc ~/.vimrc_backup```
 
-2. Simply clone this repository to ~/.vim-go-runtime in your home folder like this:
+2. Clone this repository to your home folder and run the install script (this takes some time):
 
-  ```$ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime```
-
-3. Run the install script:
-
-  ```$ sh ~/.vim-go-runtime/install.sh```
+  ```
+  $ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime
+  $ sh ~/.vim-go-runtime/install.sh
+  ```
   
-  This will take some time as its going to install all the vim plugins including vim-go and YouCompleteMe (which is quite large and needs to get compiled).
+4. Install Go binaries (inside Vim):
+
+  ```
+  :GoInstallBinaries
+  ```
   
 ## Troubleshooting
 
-1. **After cloning the repository I'm getting the following git error**
+##### After cloning the repository I'm getting the following git error
 
   ```
   No submodule mapping found in .gitmodules for path 'sources_non_forked/gruvbox'
@@ -44,7 +47,7 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
   ```
   Simply ignore this. This is a gruvbox submodule error in amix' repository (from which we use the base vimrc config). This setup even includes gruvbox with the vim-colorschemes plugin.
   
-2. **I'm getting a YouCompleteMe error after running the install script**
+##### I'm getting a YouCompleteMe error after running the install script
 
   ```
   ycm_client_support.[so|pyd|dll] and ycm_core.[so|pyd|dll] not detected; 
