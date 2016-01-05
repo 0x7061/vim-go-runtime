@@ -21,6 +21,7 @@ set guioptions-=T
 
 " Colorscheme
 if has("gui_running")
+    set linespace=2
     set background=dark
     colorscheme gruvbox
 else
