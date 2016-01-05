@@ -5,7 +5,7 @@
 call plug#begin('~/.vim-go-runtime/plugged')
 
 " Mandatory
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --gocode-completer' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-misc'               " Dependency for session
 Plug 'xolox/vim-session'            " Session management
