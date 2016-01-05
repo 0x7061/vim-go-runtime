@@ -5,25 +5,55 @@ Fast and extendable vim-based go development environment. Inspired by farazdagi'
 
 ## Install
 
-0. (Optional) Get MacVIM:
+0. Get a high enough version of Vim (7.4+) and MacVim:
 
-  ```$ brew install macvim --with-lua```
+  ```
+  $ brew install vim --with-lua
+  $ brew install macvim --with-lua
+  ```
+  You probably need to add this to your `.bash_profile` to pick the right vim:
+  ```
+  alias vim="/usr/local/bin/vim"
+  ```
+  Don't forget to source afterwards:
+  ```
+  $ source ~/.bash_profile
+  ```
 
-1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have one:
+1. Backup your old **.vimrc**, **.gvimrc** or **.ctags** if you have any:
 
   ```$ cp ~/.vimrc ~/.vimrc_backup```
 
-2. Simply clone this repository to ~/.vim-go-runtime in your home folder like this:
+2. Clone this repository to your home folder and run the install script (this takes some time):
 
-  ```$ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime```
+  ```
+  $ git clone --recursive git@github.com:codepushr/vim-go-runtime.git ~/.vim-go-runtime
+  $ sh ~/.vim-go-runtime/install.sh
+  ```
   
-  Ignore the error that says it failed to recurse into submodule path 'submodules/amix-vimrc'. This is a gruvbox submodule error in amix' repository.
+4. Install Go binaries (inside Vim):
 
-3. Run the install script:
-
-  ```$ sh ~/.vim-go-runtime/install.sh```
+  ```
+  :GoInstallBinaries
+  ```
   
-  This will take some time as its going to install all the vim plugins including vim-go and YouCompleteMe (which is quite large and needs to get compiled).
+## Troubleshooting
+
+##### After cloning the repository I'm getting the following git error
+
+  ```
+  No submodule mapping found in .gitmodules for path 'sources_non_forked/gruvbox'
+  Failed to recurse into submodule path 'submodules/amix-vimrc'
+  ```
+  Simply ignore this. This is a gruvbox submodule error in amix' repository (from which we use the base vimrc config). This setup even includes gruvbox with the vim-colorschemes plugin.
+  
+##### I'm getting a YouCompleteMe error after running the install script
+
+  ```
+  ycm_client_support.[so|pyd|dll] and ycm_core.[so|pyd|dll] not detected; 
+  you need to compile YCM before using it. Read the docs!
+  ```
+  This is just a warning, don't be scared. Just let the install script finish and it will compile it afterwards. Everything should run just fine after the script ends.
   
 ## Vimrcs
   
