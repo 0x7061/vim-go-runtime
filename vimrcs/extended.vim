@@ -37,6 +37,10 @@ set cursorline
 set colorcolumn=80
 set cmdheight=1
 
+set lazyredraw
+set list
+set listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Clipboard
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
