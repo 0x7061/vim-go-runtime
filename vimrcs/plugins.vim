@@ -89,6 +89,9 @@ au FileType go nmap <Leader>r <Plug>(go-run)
 au FileType go nmap <Leader>b <Plug>(go-build)
 au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <Leader>f <Plug>(go-def)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap <Leader>l :GoLint<CR>
+au FileType go map <Leader>p :GoPlay<CR>
 
 "
 " Nerdtree
