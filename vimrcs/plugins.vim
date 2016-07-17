@@ -5,7 +5,8 @@
 call plug#begin('~/.vim-go-runtime/plugged')
 
 " Mandatory
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --gocode-completer' }
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Golang
@@ -38,13 +39,16 @@ filetype plugin indent on           " Required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "
-" You-Complete-Me
+" Neocomplete
 "
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-" Better Completion
-set complete=.,w,b,u,t
-set completeopt=longest,menuone
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+    let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
 
 "
 " Ctrlp
