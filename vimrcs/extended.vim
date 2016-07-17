@@ -40,8 +40,9 @@ endif
 set number
 set cursorline
 set colorcolumn=80
+set pumheight=10
 set cmdheight=1
-
+set completeopt=menu,menuone
 set lazyredraw
 "set list
 "set listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮

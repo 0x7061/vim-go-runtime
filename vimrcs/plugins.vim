@@ -15,6 +15,7 @@ Plug 'SirVer/ultisnips'             " For awesome go snippets
 
 " Important
 Plug 'tpope/vim-fugitive'           " Git integration
+Plug 'airblade/vim-gitgutter'       " Git gutter
 Plug 'tomtom/tcomment_vim'          " Commenting made easy
 Plug 'scrooloose/nerdtree'          " File tree
 Plug 'Raimondi/delimitMate'         " Auto-close brackets
@@ -41,21 +42,61 @@ filetype plugin indent on           " Required
 "
 " Neocomplete
 "
+let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+if !exists('g:neocomplete#sources')
+    let g:neocomplete#sources = {}
+endif
+let g:neocomplete#sources._ = ['buffer', 'member', 'tag', 'file', 'dictionary']
+let g:neocomplete#sources.go = ['omni']
+call neocomplete#custom#source('_', 'sorters', [])
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
 
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+"
+" UltiSnips
+"
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res == 0
+    if pumvisible()
+      return "\<C-n>"
+    else
+      call UltiSnips#JumpForwards()
+      if g:ulti_jump_forwards_res == 0
+        return "\<TAB>"
+      endif
+    endif
+  endif
+  return ""
 endfunction
 
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
+function! g:UltiSnips_Reverse()
+  call UltiSnips#JumpBackwards()
+  if g:ulti_jump_backwards_res == 0
+    return "\<C-P>"
+  endif
+
+  return ""
+endfunction
+
+
+if !exists("g:UltiSnipsJumpForwardTrigger")
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+endif
+
+if !exists("g:UltiSnipsJumpBackwardTrigger")
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+endif
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 
 "
 " Ctrlp
