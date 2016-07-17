@@ -19,6 +19,8 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=T 
 
+set foldcolumn=0
+
 " Colorscheme
 if has("gui_running")
     set linespace=2
