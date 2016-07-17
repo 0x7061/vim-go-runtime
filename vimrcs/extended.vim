@@ -23,7 +23,10 @@ set guioptions-=T
 if has("gui_running")
     set linespace=2
     set background=dark
-    colorscheme gruvbox
+
+    let g:rehash256 = 1
+    let g:molokai_original = 1
+    colorscheme molokai
 else
     colorscheme iceberg
 endif
