@@ -7,12 +7,9 @@ call plug#begin('~/.vim-go-runtime/plugged')
 " Mandatory
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --gocode-completer' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'xolox/vim-misc'               " Dependency for session
-Plug 'xolox/vim-session'            " Session management
 
 " Golang
 Plug 'fatih/vim-go', {'for': 'go'}  " THE go plugin
-Plug 'garyburd/go-explorer'         " For GoDoc
 Plug 'SirVer/ultisnips'             " For awesome go snippets
 
 " Important
@@ -27,6 +24,7 @@ Plug 'ap/vim-buftabline'            " Buffer bar
 " Nice to have
 Plug 'itchyny/lightline.vim'        " Statusline
 Plug 'flazz/vim-colorschemes', { 'do': 'ln -s ~/.vim-go-runtime/plugged/vim-colorschemes/colors ~/.vim/colors' }
+Plug 'fatih/molokai'                " Fatih's molokai theme
 Plug 'mhinz/vim-sayonara'           " Kill buffer without closing window
 
 call plug#end()
@@ -73,12 +71,15 @@ nmap <C-d> :CtrlPBufTag<CR>
 let g:go_fmt_fail_silently = 0
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
+let g:go_snippet_case_type = "camelcase"
 
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
@@ -91,6 +92,7 @@ au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <Leader>f <Plug>(go-def)
 au FileType go nmap <Leader>t <Plug>(go-test)
 au FileType go nmap <Leader>l :GoLint<CR>
+au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go map <Leader>p :GoPlay<CR>
 
 "
@@ -100,56 +102,13 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=34
 
 "
-" Ultisnips
-"
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-                return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-function! g:UltiSnips_Reverse()
-    call UltiSnips#JumpBackwards()
-    if g:ulti_jump_backwards_res == 0
-        return "\<C-P>"
-    endif
-
-    return ""
-endfunction
-
-if !exists("g:UltiSnipsJumpForwardTrigger")
-    let g:UltiSnipsJumpForwardTrigger = "<tab>"
-endif
-
-if !exists("g:UltiSnipsJumpBackwardTrigger")
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-endif
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
-
-"
-" Vim-Session
-"
-let g:session_autosave = 'yes'
-let g:session_autoload = 'yes'
-
-"
 " DelimitMate
 "
-let g:delimitMate_expand_cr = 1     
-let g:delimitMate_expand_space = 1      
-let g:delimitMate_smart_quotes = 1      
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+let g:delimitMate_smart_quotes = 1
 let g:delimitMate_expand_inside_quotes = 0
+let g:delimitMate_smart_matchpairs = '^\%(\w\|\$\)'
 
 "
 " Tagbar
