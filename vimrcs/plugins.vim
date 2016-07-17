@@ -15,7 +15,6 @@ Plug 'SirVer/ultisnips'             " For awesome go snippets
 
 " Important
 Plug 'tpope/vim-fugitive'           " Git integration
-Plug 'airblade/vim-gitgutter'       " Git gutter
 Plug 'tomtom/tcomment_vim'          " Commenting made easy
 Plug 'scrooloose/nerdtree'          " File tree
 Plug 'Raimondi/delimitMate'         " Auto-close brackets

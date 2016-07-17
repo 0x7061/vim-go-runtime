@@ -38,7 +38,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set number
-set cursorline
+"set cursorline
 set colorcolumn=80
 set pumheight=10
 set cmdheight=1
