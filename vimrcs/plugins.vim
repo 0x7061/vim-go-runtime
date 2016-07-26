@@ -5,8 +5,7 @@
 call plug#begin('~/.vim-go-runtime/plugged')
 
 " Mandatory
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Golang
@@ -37,26 +36,6 @@ filetype plugin indent on           " Required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"
-" Neocomplete
-"
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-if !exists('g:neocomplete#sources')
-    let g:neocomplete#sources = {}
-endif
-let g:neocomplete#sources._ = ['buffer', 'member', 'tag', 'file', 'dictionary']
-let g:neocomplete#sources.go = ['omni']
-call neocomplete#custom#source('_', 'sorters', [])
-
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
 
 "
 " UltiSnips
